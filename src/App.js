@@ -3,6 +3,9 @@ import { useState } from "react";
 import { AlertComponent } from "./Components/Alert-component";
 import { DisplayAlert } from "./Components/Display-alert";
 
+import { useDispatch } from "react-redux";
+import { setAlertMessage } from "./Redux/Features/alert-slice";
+
 import "./App.css";
 
 function App() {
@@ -13,19 +16,27 @@ function App() {
   const [dataSuccess, setDataSuccess] = useState("");
   const [dataError, setDataError] = useState("");
 
+  const dispatch = useDispatch();
+
   const clickHandlerInfoAlert = (e) => {
-    setDisplayAlertInfo(!displayAlertInfo);
+    setDisplayAlertInfo(true);
     setDataInfo(e.currentTarget.dataset.name);
+    dispatch(setAlertMessage("Info"));
+    setTimeout(() => setDisplayAlertInfo(false), 3000);
   };
 
   const clickHandlerSucessAlert = (e) => {
-    setDisplayAlertSuccess(!displayAlertSuccess);
+    setDisplayAlertSuccess(true);
     setDataSuccess(e.currentTarget.dataset.name);
+    dispatch(setAlertMessage("Success"));
+    setTimeout(() => setDisplayAlertSuccess(false), 3000);
   };
 
   const clickHandlerErrorAlert = (e) => {
-    setDisplayAlertError(!displayAlertError);
+    setDisplayAlertError(true);
     setDataError(e.currentTarget.dataset.name);
+    dispatch(setAlertMessage("Error"));
+    setTimeout(() => setDisplayAlertError(false), 3000);
   };
 
   return (
