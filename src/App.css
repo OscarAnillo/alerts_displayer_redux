@@ -7,6 +7,7 @@
   height: 100vh;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .alert-div {
   position: absolute;
@@ -36,4 +37,49 @@
 }
 .error {
   background-color: rgb(233, 55, 55);
+}
+
+/* DisplayAlert */
+.div-info {
+  background-color: rgb(70, 70, 240);
+  border-radius: 7px 0 0 7px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 0%;
+  transition: .3s;
+}
+.show-info-alert.div-info {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  transition: .5s;
+  width: 50%;
+}
+.div-success {
+  background-color: rgb(33, 211, 122);
+  border-radius: 7px 0 0 7px;
+  color: #fff;
+}
+.show-info-success.div-success {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  width: 50%;
+  transition: .5s;
+}
+.div-error {
+  background-color: rgb(233, 55, 55);;
+  border-radius: 7px 0 0 7px;
+  color: #fff;
+  transition: .5s;
+}
+.show-info-error.div-error {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  width: 50%;
+  transition: .5s;
 }
