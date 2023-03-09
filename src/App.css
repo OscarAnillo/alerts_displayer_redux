@@ -4,5 +4,36 @@
 }
 
 .App {
+  height: 100vh;
+  position: relative;
   text-align: center;
+}
+.alert-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.alert-div h1 {
+  color: #5a5858;
+  letter-spacing: 3px;
+  padding: .5em 0;
+  text-transform: uppercase;
+}
+.alert-div button {
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  margin: 0 1em;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+}
+.info {
+  background-color: rgb(70, 70, 240);
+}
+.success {
+  background-color: rgb(33, 211, 122);
+}
+.error {
+  background-color: rgb(233, 55, 55);
 }

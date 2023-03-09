@@ -1,9 +1,10 @@
+import { AlertComponent } from "./Components/Alert-component";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Oscar Anillo</h1>
+      <AlertComponent />
     </div>
   );
 }
